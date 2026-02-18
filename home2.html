@@ -1,329 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechNest Solutions | Product Showcase</title>
-    <meta
-      name="description"
-      content="Explore TechNest's interactive smart home diagram and product showcase."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="text-slate-900">
-    <header class="bg-white/90 backdrop-blur lg:sticky lg:top-0 z-40">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
-      >
-        <a href="index.html" class="flex items-center gap-2">
-          <span class="text-xl font-semibold text-blue-600">TechNest</span>
-          <span class="text-sm text-slate-500">Solutions</span>
-        </a>
-        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
-          <a href="index.html" class="text-slate-600 hover:text-blue-600"
-            >Home</a
-          >
-          <a href="home2.html" class="text-blue-600">Home 2</a>
-          <a href="about.html" class="text-slate-600 hover:text-blue-600"
-            >About</a
-          >
-          <a href="services.html" class="text-slate-600 hover:text-blue-600"
-            >Services</a
-          >
-          <a href="pricing.html" class="text-slate-600 hover:text-blue-600"
-            >Pricing</a
-          >
-          <a href="blog.html" class="text-slate-600 hover:text-blue-600">Blog</a>
-          <a href="contact.html" class="text-slate-600 hover:text-blue-600"
-            >Contact</a
-          >
-          <a
-            href="dashboard.html"
-            class="px-4 py-2 rounded-full border border-slate-200 text-sm font-semibold text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
-            >Dashboard</a
-          >
-          <a
-            href="login.html"
-            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
-            >Login</a
-          >
-          <a
-            href="login.html#register"
-            class="px-4 py-2 rounded-full bg-teal-500 text-white text-sm font-semibold hover:bg-teal-600 transition"
-            >Register</a
-          >
-        </nav>
-        <div class="flex items-center gap-3">
-          <button
-            class="rounded-full border border-slate-200 p-2 text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
-            data-theme-toggle
-            aria-label="Toggle dark mode"
-            aria-pressed="false"
-          >
-            🌙
-          </button>
-          <button
-            class="lg:hidden rounded-full border border-slate-200 p-2"
-            data-nav-toggle
-            aria-label="Open menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-slate-700"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div
-        class="lg:hidden hidden border-t border-slate-100 bg-white"
-        data-mobile-nav
-      >
-        <div class="px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-          <a href="index.html">Home</a>
-          <a href="home2.html" class="text-blue-600">Home 2</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-          <a
-            href="dashboard.html"
-            class="w-full text-center px-4 py-2 rounded-full border border-slate-200"
-            >Dashboard</a
-          >
-          <a
-            href="login.html"
-            class="w-full text-center px-4 py-2 rounded-full bg-blue-600 text-white"
-            >Login</a
-          >
-          <a
-            href="login.html#register"
-            class="w-full text-center px-4 py-2 rounded-full bg-teal-500 text-white"
-            >Register</a
-          >
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="py-16 sm:py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center max-w-3xl mx-auto space-y-4" data-animate>
-            <span class="tag">Product Showcase Experience</span>
-            <h1 class="text-4xl sm:text-5xl font-semibold">
-              Explore the TechNest Smart Home Map
-            </h1>
-            <p class="text-slate-600 text-lg">
-              Tap each zone to see the devices, benefits, and compatible brands
-              designed for every room.
-            </p>
-          </div>
-          <div
-            class="mt-12 relative rounded-3xl overflow-hidden soft-shadow"
-            data-animate
-          >
-            <img
-              src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1600&q=80"
-              alt="Smart home diagram"
-              class="w-full h-[480px] object-cover"
-            />
-            <button
-              class="absolute top-20 left-16 bg-white/90 text-sm font-semibold px-4 py-2 rounded-full shadow"
-              data-diagram-zone
-              data-title="Living Room"
-              data-devices="Smart lighting, ambient sensors, voice hubs"
-              data-benefits="Instant scene control, energy savings"
-              data-brands="Google Home, Philips Hue"
-            >
-              Living Room
-            </button>
-            <button
-              class="absolute top-40 right-12 bg-white/90 text-sm font-semibold px-4 py-2 rounded-full shadow"
-              data-diagram-zone
-              data-title="Bedroom"
-              data-devices="Climate control, sleep automation"
-              data-benefits="Comfortable temperatures and quiet routines"
-              data-brands="SmartThings, Nest"
-            >
-              Bedroom
-            </button>
-            <button
-              class="absolute bottom-32 left-24 bg-white/90 text-sm font-semibold px-4 py-2 rounded-full shadow"
-              data-diagram-zone
-              data-title="Kitchen"
-              data-devices="Smart switches, safety sensors"
-              data-benefits="Hands-free control and real-time alerts"
-              data-brands="Amazon Alexa, Ring"
-            >
-              Kitchen
-            </button>
-            <button
-              class="absolute bottom-20 right-16 bg-white/90 text-sm font-semibold px-4 py-2 rounded-full shadow"
-              data-diagram-zone
-              data-title="Security Area"
-              data-devices="Cameras, smart locks, entry sensors"
-              data-benefits="24/7 monitoring and instant notifications"
-              data-brands="Ring, Google Nest"
-            >
-              Security Area
-            </button>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNest | Product Showcase</title>
+  <meta name="description" content="Explore TechNest's interactive smart home diagram and product showcase." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <section class="py-16 sm:py-20 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
-            <div
-              class="p-6 bg-white rounded-2xl soft-shadow mx-auto"
-              data-animate
-            >
-              <h3 class="font-semibold text-lg">Lighting</h3>
-              <p class="text-sm text-slate-600 mt-2">
-                Mood scenes, dimmers, daylight automation.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-2xl soft-shadow mx-auto"
-              data-animate
-            >
-              <h3 class="font-semibold text-lg">Security</h3>
-              <p class="text-sm text-slate-600 mt-2">
-                Motion alerts, camera feeds, smart locks.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-2xl soft-shadow mx-auto"
-              data-animate
-            >
-              <h3 class="font-semibold text-lg">Climate</h3>
-              <p class="text-sm text-slate-600 mt-2">
-                Personalized cooling and energy tracking.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-2xl soft-shadow mx-auto"
-              data-animate
-            >
-              <h3 class="font-semibold text-lg">Entertainment</h3>
-              <p class="text-sm text-slate-600 mt-2">
-                Multi-room audio and cinema scenes.
-              </p>
-            </div>
-          </div>
+<body class="text-slate-900">
+  <header class="bg-white/90 backdrop-blur lg:sticky lg:top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-6">
+      <a href="index.html"
+        class="flex items-center gap-2 shrink-0 -ml-1 sm:ml-0 group hover:scale-105 transition-transform duration-300">
+        <img src="assets/favicon.svg" alt="TechNest logo"
+          class="h-9 w-9 rounded-lg shrink-0 shadow-sm group-hover:shadow-blue-200 dark:group-hover:shadow-none transition-shadow" />
+        <span class="text-xl font-semibold text-blue-600 group-hover:text-blue-700 transition-colors">TechNest</span>
 
-          <div class="mt-16 grid gap-10 lg:grid-cols-2 items-center">
-            <div class="space-y-4" data-animate>
-              <h2 class="text-3xl font-semibold">Quick Installation Process</h2>
-              <p class="text-slate-600">
-                From consultation to activation, TechNest keeps you informed at
-                every step.
-              </p>
-              <ol class="space-y-3 text-slate-600 text-sm">
-                <li>1. On-site assessment and system blueprint.</li>
-                <li>2. Device selection and compatibility check.</li>
-                <li>3. Professional installation and testing.</li>
-                <li>4. Personalized onboarding and automation setup.</li>
-              </ol>
-            </div>
-            <div
-              class="rounded-3xl overflow-hidden soft-shadow"
-              data-animate
-            >
-              <img
-                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
-                alt="Installer at work"
-                class="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-14 bg-white">
-        <div
-          class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 bg-blue-600 text-white rounded-3xl p-8"
-          data-animate
-        >
-          <div>
-            <h3 class="text-2xl font-semibold">
-              Ready to personalize your smart home?
-            </h3>
-            <p class="text-blue-100 mt-2">
-              Book a free consultation with TechNest today.
-            </p>
-          </div>
-          <a
-            href="contact.html"
-            class="px-6 py-3 bg-white text-blue-600 rounded-full font-semibold"
-            >Book Consultation</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <div class="modal hidden" data-diagram-modal>
-      <div class="modal-content space-y-4">
-        <div class="flex items-start justify-between">
-          <h3 class="text-xl font-semibold" data-modal-title></h3>
-          <button class="text-slate-400" data-modal-close>✕</button>
-        </div>
-        <p class="text-sm text-slate-600">
-          <span class="font-semibold text-slate-800">Devices:</span>
-          <span data-modal-devices></span>
-        </p>
-        <p class="text-sm text-slate-600">
-          <span class="font-semibold text-slate-800">Benefits:</span>
-          <span data-modal-benefits></span>
-        </p>
-        <p class="text-sm text-slate-600">
-          <span class="font-semibold text-slate-800">Compatible brands:</span>
-          <span data-modal-brands></span>
-        </p>
+      </a>
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-7 text-sm font-semibold ml-auto whitespace-nowrap">
+        <a href="index.html" class="text-slate-600 hover:text-blue-600 transition">Home</a>
+        <a href="home2.html" class="text-blue-600 transition">Home 2</a>
+        <a href="about.html" class="text-slate-600 hover:text-blue-600 transition">About</a>
+        <a href="services.html" class="text-slate-600 hover:text-blue-600 transition">Services</a>
+        <a href="pricing.html" class="text-slate-600 hover:text-blue-600 transition">Pricing</a>
+        <a href="blog.html" class="text-slate-600 hover:text-blue-600 transition">Blog</a>
+        <a href="contact.html" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
+        <div class="h-6 w-px bg-slate-200 mx-1 xl:mx-2"></div>
+        <a href="dashboard.html"
+          class="px-4 py-2 rounded-full border border-slate-200 text-sm font-semibold text-slate-600 hover:border-blue-600 hover:text-blue-600 transition">Dashboard</a>
+        <a href="login.html"
+          class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition">Login</a>
+        <a href="login.html#register"
+          class="px-4 py-2 rounded-full bg-teal-500 text-white text-sm font-semibold hover:bg-teal-600 transition">Register</a>
+      </nav>
+      <div class="flex items-center gap-3">
         <button
-          class="w-full py-3 rounded-full bg-blue-600 text-white text-sm font-semibold"
-          data-modal-close
-        >
-          Close
+          class="rounded-full border border-slate-200 p-2 text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
+          data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          🌙
+        </button>
+        <button class="lg:hidden rounded-full border border-slate-200 p-2" data-nav-toggle aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
     </div>
+    <div class="lg:hidden hidden border-t border-slate-100 bg-white" data-mobile-nav>
+      <div class="px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+        <a href="index.html">Home</a>
+        <a href="home2.html" class="text-blue-600">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html" class="w-full text-center px-4 py-2 rounded-full border border-slate-200">Dashboard</a>
+        <a href="login.html" class="w-full text-center px-4 py-2 rounded-full bg-blue-600 text-white">Login</a>
+        <a href="login.html#register"
+          class="w-full text-center px-4 py-2 rounded-full bg-teal-500 text-white">Register</a>
+      </div>
+    </div>
+  </header>
 
-    <footer class="bg-white border-t border-slate-100">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-6 lg:grid-cols-3 text-sm"
-      >
-        <div class="space-y-3">
-          <p class="font-semibold text-blue-600">TechNest Solutions</p>
-          <p class="text-slate-600">
-            Premium smart home installations with intuitive automation.
+  <main>
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4" data-animate>
+          <span class="tag">Product Showcase Experience</span>
+          <h1 class="text-4xl sm:text-5xl font-semibold">
+            Explore the TechNest Smart Home Map
+          </h1>
+          <p class="text-slate-600 text-lg">
+            Tap each zone to see the devices, benefits, and compatible brands
+            designed for every room.
           </p>
         </div>
-        <div class="space-y-2 text-slate-600">
-          <p class="font-semibold text-slate-700">Support</p>
-          <p>Mon-Sun: 9 AM - 9 PM</p>
-          <p>SmartCare 24/7 hotline</p>
-        </div>
-        <div class="space-y-2 text-slate-600">
-          <p class="font-semibold text-slate-700">Contact</p>
-          <p>solutions@technest.in</p>
-          <p>+91 90000 56789</p>
+        <div class="mt-12 relative rounded-3xl overflow-hidden soft-shadow group" data-animate>
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=80"
+            alt="Smart home layout"
+            class="w-full h-auto block transition-transform duration-700 group-hover:scale-105" />
+          <button
+            class="absolute top-14 left-1/2 -translate-x-1/2 sm:top-20 sm:left-16 sm:translate-x-0 bg-white/90 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow whitespace-nowrap"
+            data-diagram-zone data-title="Living Room" data-devices="Smart lighting, ambient sensors, voice hubs"
+            data-benefits="Instant scene control, energy savings" data-brands="Google Home, Philips Hue">
+            Living Room
+          </button>
+          <button
+            class="absolute top-[42%] left-1/2 -translate-x-1/2 sm:top-40 sm:right-12 sm:left-auto sm:translate-x-0 bg-white/90 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow whitespace-nowrap"
+            data-diagram-zone data-title="Bedroom" data-devices="Climate control, sleep automation"
+            data-benefits="Comfortable temperatures and quiet routines" data-brands="SmartThings, Nest">
+            Bedroom
+          </button>
+          <button
+            class="absolute bottom-32 left-1/2 -translate-x-1/2 sm:bottom-32 sm:left-24 sm:translate-x-0 bg-white/90 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow whitespace-nowrap"
+            data-diagram-zone data-title="Kitchen" data-devices="Smart switches, safety sensors"
+            data-benefits="Hands-free control and real-time alerts" data-brands="Amazon Alexa, Ring">
+            Kitchen
+          </button>
+          <button
+            class="absolute bottom-16 left-1/2 -translate-x-1/2 sm:bottom-20 sm:right-16 sm:left-auto sm:translate-x-0 bg-white/90 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow whitespace-nowrap"
+            data-diagram-zone data-title="Security Area" data-devices="Cameras, smart locks, entry sensors"
+            data-benefits="24/7 monitoring and instant notifications" data-brands="Ring, Google Nest">
+            Security Area
+          </button>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="assets/main.js"></script>
-  </body>
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
+          <div class="p-6 bg-white rounded-2xl soft-shadow mx-auto" data-animate>
+            <h3 class="font-semibold text-lg">Lighting</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Mood scenes, dimmers, daylight automation.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl soft-shadow mx-auto" data-animate>
+            <h3 class="font-semibold text-lg">Security</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Motion alerts, camera feeds, smart locks.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl soft-shadow mx-auto" data-animate>
+            <h3 class="font-semibold text-lg">Climate</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Personalized cooling and energy tracking.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl soft-shadow mx-auto" data-animate>
+            <h3 class="font-semibold text-lg">Entertainment</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Multi-room audio and cinema scenes.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-16 grid gap-10 lg:grid-cols-2 items-center">
+          <div class="space-y-4" data-animate>
+            <h2 class="text-3xl font-semibold">Quick Installation Process</h2>
+            <p class="text-slate-600">
+              From consultation to activation, TechNest keeps you informed at
+              every step.
+            </p>
+            <ol class="space-y-3 text-slate-600 text-sm">
+              <li>1. On-site assessment and system blueprint.</li>
+              <li>2. Device selection and compatibility check.</li>
+              <li>3. Professional installation and testing.</li>
+              <li>4. Personalized onboarding and automation setup.</li>
+            </ol>
+          </div>
+          <div class="rounded-3xl overflow-hidden soft-shadow" data-animate>
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
+              alt="Installer at work" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-slate-900 text-white overflow-hidden relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8" data-animate>
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest">
+              <span class="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              Unique Signature Tech
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+              One Unified <span class="text-blue-500">Neural Protocol.</span>
+            </h2>
+            <p class="text-slate-400 text-lg leading-relaxed">
+              We don't just connect devices; we weave them into a single, intelligent fabric that anticipates your needs
+              before you even realize them.
+            </p>
+            <div class="grid gap-6">
+              <div
+                class="flex gap-4 items-start p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <div class="text-2xl">🪄</div>
+                <div>
+                  <h4 class="font-bold text-white">Ghost Automation</h4>
+                  <p class="text-slate-400 text-sm">Invisible routines that run in the background without needing a
+                    single voice command.</p>
+                </div>
+              </div>
+              <div
+                class="flex gap-4 items-start p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <div class="text-2xl">🌐</div>
+                <div>
+                  <h4 class="font-bold text-white">Local-First Mesh</h4>
+                  <p class="text-slate-400 text-sm">Your data never leaves your home. Processing happens locally for
+                    zero latency and total privacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative" data-animate>
+            <div class="relative z-10 rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1558211583-d26f610c1eb1?auto=format&fit=crop&w=1200&q=80"
+                alt="Unique Intelligence" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-blue-600/20 mix-blend-overlay"></div>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/30 rounded-full blur-[80px]"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-teal-600/30 rounded-full blur-[80px]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 bg-blue-600 text-white rounded-3xl p-8"
+        data-animate>
+        <div>
+          <h3 class="text-2xl font-semibold">
+            Ready to personalize your smart home?
+          </h3>
+          <p class="text-blue-100 mt-2">
+            Book a free consultation with TechNest today.
+          </p>
+        </div>
+        <a href="contact.html" class="px-6 py-3 bg-white text-blue-600 rounded-full font-semibold">Book Consultation</a>
+      </div>
+    </section>
+    <section class="py-16 sm:py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4" data-animate>
+          <span class="tag">Premium Installations</span>
+          <h2 class="text-3xl sm:text-4xl font-bold">Bringing Intelligence to Every Corner</h2>
+          <p class="text-slate-600">Explore real-world examples of our smart integrations across premium homes.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate>
+          <div class="group relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+              alt="Smart Lounge"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+              <div class="text-white">
+                <p class="text-sm font-semibold text-blue-400 mb-1">Living Spaces</p>
+                <h3 class="text-xl font-bold">Adaptive Lighting</h3>
+              </div>
+            </div>
+          </div>
+          <div class="group relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80"
+              alt="Smart Kitchen"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+              <div class="text-white">
+                <p class="text-sm font-semibold text-blue-400 mb-1">Culinary Hub</p>
+                <h3 class="text-xl font-bold">Smart Appliances</h3>
+              </div>
+            </div>
+          </div>
+          <div class="group relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1558211583-d26f610c1eb1?auto=format&fit=crop&w=800&q=80"
+              alt="Home Office"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+              <div class="text-white">
+                <p class="text-sm font-semibold text-blue-400 mb-1">Workspace</p>
+                <h3 class="text-xl font-bold">Voice-Controlled Desk</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" data-diagram-modal>
+    <div class="modal-content space-y-4">
+      <div class="flex items-start justify-between">
+        <h3 class="text-xl font-semibold" data-modal-title></h3>
+        <button class="text-slate-400" data-modal-close>✕</button>
+      </div>
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-slate-800">Devices:</span>
+        <span data-modal-devices></span>
+      </p>
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-slate-800">Benefits:</span>
+        <span data-modal-benefits></span>
+      </p>
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-slate-800">Compatible brands:</span>
+        <span data-modal-brands></span>
+      </p>
+      <button class="w-full py-3 rounded-full bg-blue-600 text-white text-sm font-semibold" data-modal-close>
+        Close
+      </button>
+    </div>
+  </div>
+
+  <footer class="bg-white border-t border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-sm">
+        <div class="space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <img src="assets/favicon.svg" alt="TechNest logo" class="h-8 w-8 rounded-md shrink-0" />
+            <span class="text-base font-semibold text-blue-600">TechNest</span>
+
+          </a>
+          <p class="text-slate-600">
+            Smart home automation specialists delivering premium, secure
+            installations.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+              class="h-9 w-9 rounded-full border border-slate-200 inline-flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M13.5 21v-7h2.3l.4-2.7h-2.7V9.6c0-.8.2-1.3 1.3-1.3h1.5V5.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v1.9H8.5V14h2.2v7h2.8z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              class="h-9 w-9 rounded-full border border-slate-200 inline-flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M7.8 3h8.4A4.8 4.8 0 0 1 21 7.8v8.4a4.8 4.8 0 0 1-4.8 4.8H7.8A4.8 4.8 0 0 1 3 16.2V7.8A4.8 4.8 0 0 1 7.8 3zm0 1.8a3 3 0 0 0-3 3v8.4a3 3 0 0 0 3 3h8.4a3 3 0 0 0 3-3V7.8a3 3 0 0 0-3-3H7.8zm8.8 1.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 1.8A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3z" />
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X"
+              class="h-9 w-9 rounded-full border border-slate-200 inline-flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M18.9 3H22l-6.8 7.8 8 10.2h-6.3L12 14.6 6.4 21H3.2l7.3-8.3L2.8 3h6.4l4.3 5.8L18.9 3zm-1.1 16.2h1.7L8.3 4.7H6.5l11.3 14.5z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+              class="h-9 w-9 rounded-full border border-slate-200 inline-flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-600 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M6.5 8.7H3.8V20h2.7V8.7zM5.1 4a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 5.1 4zM20.2 13.4c0-3.2-1.7-4.8-4-4.8-1.8 0-2.6 1-3 1.8v-1.6h-2.7V20h2.7v-5.6c0-1.5.3-3 2.1-3s2.1 1.6 2.1 3.1V20h2.8v-6.6z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-2 text-slate-600">
+          <p class="font-semibold text-slate-700">Quick Links</p>
+          <a href="index.html" class="block hover:text-blue-600 transition">Home</a>
+          <a href="about.html" class="block hover:text-blue-600 transition">About</a>
+          <a href="services.html" class="block hover:text-blue-600 transition">Services</a>
+          <a href="pricing.html" class="block hover:text-blue-600 transition">Pricing</a>
+          <a href="contact.html" class="block hover:text-blue-600 transition">Contact</a>
+        </div>
+
+        <div class="space-y-2 text-slate-600">
+          <p class="font-semibold text-slate-700">Trust & Compliance</p>
+          <p>ISO 27001 Certified</p>
+          <p>Google Home Certified</p>
+          <p>SmartThings Partner</p>
+        </div>
+
+        <div class="space-y-2 text-slate-600">
+          <p class="font-semibold text-slate-700">Contact</p>
+          <p>hello@technestsolutions.in</p>
+          <p>216632673263</p>
+          <p>WhatsApp Support 24/7</p>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-slate-500">
+        <p>© 2026 TechNest. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-blue-600 transition">Terms of Service</a>
+          <a href="#" class="hover:text-blue-600 transition">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+
 </html>

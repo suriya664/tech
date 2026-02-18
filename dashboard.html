@@ -1,281 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechNest Solutions | Dashboard</title>
-    <meta
-      name="description"
-      content="TechNest service appointment and automation management dashboard."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <header class="bg-white border-b border-slate-100">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
-      >
-        <div class="flex items-center gap-3">
-          <button
-            class="lg:hidden rounded-full border border-slate-200 p-2"
-            data-nav-toggle
-            aria-label="Open dashboard menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-slate-700"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-          <a href="index.html" class="flex items-center gap-2">
-            <span class="text-xl font-semibold text-blue-600">TechNest</span>
-            <span class="text-sm text-slate-500">Solutions</span>
-          </a>
-        </div>
-        <div class="flex items-center gap-3">
-          <button
-            class="rounded-full border border-slate-200 p-2 text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
-            data-theme-toggle
-            aria-label="Toggle dark mode"
-            aria-pressed="false"
-          >
-            🌙
-          </button>
-          <a
-            href="index.html"
-            class="px-4 py-2 rounded-full border border-slate-200 text-sm font-semibold text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
-          >
-            Logout
-          </a>
-        </div>
-      </div>
-      <div
-        class="lg:hidden hidden fixed inset-y-0 left-0 w-72 bg-white shadow-xl border-r border-slate-100 z-50 p-6"
-        data-mobile-nav
-      >
-        <div class="flex items-center justify-between">
-          <a href="index.html" class="flex items-center gap-2">
-            <span class="text-lg font-semibold text-blue-600">TechNest</span>
-            <span class="text-xs text-slate-500">Solutions</span>
-          </a>
-          <button
-            class="text-slate-500"
-            data-nav-toggle
-            aria-label="Close menu"
-          >
-            ✕
-          </button>
-        </div>
-        <nav class="mt-8 space-y-4 text-sm font-medium text-slate-600">
-          <a href="dashboard.html#overview" class="text-blue-600">Overview</a>
-          <a href="dashboard.html#installations">Installations</a>
-          <a href="dashboard.html#requests">Service Requests</a>
-          <a href="dashboard.html#scenes">Automation Scenes</a>
-          <a href="dashboard.html#team">Team Assignments</a>
-          <a href="dashboard.html#analytics">Analytics</a>
-          <a href="dashboard.html#admin">Admin Panel</a>
-        </nav>
-      </div>
-    </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-      <div class="grid gap-8 lg:grid-cols-[240px_1fr]">
-        <aside class="hidden lg:flex flex-col gap-4">
-          <div class="bg-white rounded-3xl p-6 soft-shadow">
-            <p class="text-xs uppercase text-slate-400">Dashboard</p>
-            <p class="text-lg font-semibold mt-2">Welcome, Admin</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNest | Dashboard</title>
+  <meta name="description" content="TechNest service appointment and automation management dashboard." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <header class="bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <button type="button" class="lg:hidden rounded-full border border-slate-200 p-2" data-nav-toggle
+          aria-label="Open dashboard menu" aria-controls="dashboard-mobile-nav" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <a href="index.html" class="flex items-center gap-2 shrink-0 -ml-1 sm:ml-0">
+          <img src="assets/favicon.svg" alt="TechNest logo" class="h-9 w-9 rounded-lg shrink-0" />
+          <span class="text-xl font-semibold text-blue-600">TechNest</span>
+
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button
+          class="rounded-full border border-slate-200 p-2 text-slate-600 hover:border-blue-600 hover:text-blue-600 transition"
+          data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          🌙
+        </button>
+        <div class="flex items-center gap-3 pl-3 border-l border-slate-100">
+          <div class="text-right hidden sm:block">
+            <p class="text-xs font-bold text-slate-900 dark:text-white leading-tight">Admin User</p>
+            <p class="text-[9px] text-teal-500 font-bold uppercase tracking-tighter">Verified Account</p>
           </div>
-          <nav class="bg-white rounded-3xl p-6 soft-shadow text-sm font-medium text-slate-600 space-y-3">
-            <a href="dashboard.html#overview" class="text-blue-600">Overview</a>
-            <a href="dashboard.html#installations" class="hover:text-blue-600"
-              >Installations</a
-            >
-            <a href="dashboard.html#requests" class="hover:text-blue-600"
-              >Service Requests</a
-            >
-            <a href="dashboard.html#scenes" class="hover:text-blue-600"
-              >Automation Scenes</a
-            >
-            <a href="dashboard.html#team" class="hover:text-blue-600"
-              >Team Assignments</a
-            >
-            <a href="dashboard.html#analytics" class="hover:text-blue-600"
-              >Analytics</a
-            >
-            <a href="dashboard.html#admin" class="hover:text-blue-600"
-              >Admin Panel</a
-            >
-          </nav>
-        </aside>
-
-        <main class="space-y-8">
-          <section id="overview" class="bg-white rounded-3xl p-6 soft-shadow">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h1 class="text-3xl font-semibold">Service Overview</h1>
-                <p class="text-slate-600 mt-2">
-                  Track installations, service requests, and automation health
-                  in one place.
-                </p>
-              </div>
-              <a
-                href="contact.html"
-                class="px-6 py-3 rounded-full bg-blue-600 text-white text-sm font-semibold text-center"
-                >New Appointment</a
-              >
-            </div>
-          </section>
-
-          <section
-            id="installations"
-            class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <p class="text-xs uppercase text-slate-400">Active installs</p>
-              <p class="text-3xl font-semibold mt-3">18</p>
-              <p class="text-sm text-slate-600 mt-2">
-                6 scheduled for this week
-              </p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <p class="text-xs uppercase text-slate-400">Open tickets</p>
-              <p class="text-3xl font-semibold mt-3">7</p>
-              <p class="text-sm text-slate-600 mt-2">
-                Average response time 42 mins
-              </p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <p class="text-xs uppercase text-slate-400">Automation uptime</p>
-              <p class="text-3xl font-semibold mt-3">99.4%</p>
-              <p class="text-sm text-slate-600 mt-2">
-                Across 150+ connected homes
-              </p>
-            </div>
-          </section>
-
-          <section id="scenes" class="grid gap-6 lg:grid-cols-2">
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Automation Scenes</h2>
-              <p class="text-sm text-slate-600 mt-3">
-                Review active scenes, trigger health checks, and deploy updated
-                routines for lighting and climate control.
-              </p>
-              <div class="mt-4 flex flex-wrap gap-3 text-sm">
-                <span class="tag">Morning Routine</span>
-                <span class="tag">Security Away</span>
-                <span class="tag">Cinema Mode</span>
-              </div>
-            </div>
-            <div id="team" class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Team Assignments</h2>
-              <p class="text-sm text-slate-600 mt-3">
-                Track technician schedules, certifications, and deployment
-                zones across India.
-              </p>
-              <div class="mt-4 text-sm text-slate-600 space-y-2">
-                <div class="flex justify-between">
-                  <span>Arjun Verma</span>
-                  <span>North Zone</span>
-                </div>
-                <div class="flex justify-between">
-                  <span>Meera Nair</span>
-                  <span>West Zone</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="requests" class="grid gap-6 lg:grid-cols-2">
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Upcoming Installations</h2>
-              <div class="mt-4 space-y-3 text-sm text-slate-600">
-                <div class="flex justify-between">
-                  <span>Rao Residence • Bengaluru</span>
-                  <span>Tomorrow, 10:00 AM</span>
-                </div>
-                <div class="flex justify-between">
-                  <span>Mehta Residence • Mumbai</span>
-                  <span>Fri, 2:30 PM</span>
-                </div>
-                <div class="flex justify-between">
-                  <span>Kapoor Residence • Delhi</span>
-                  <span>Sat, 11:00 AM</span>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Admin Notes</h2>
-              <p class="text-sm text-slate-600 mt-4">
-                Ensure all technicians are updated on the latest SmartThings
-                firmware rollouts and security compliance checklists.
-              </p>
-              <div class="mt-6 flex gap-3">
-                <span class="tag">Compliance</span>
-                <span class="tag">Firmware</span>
-                <span class="tag">Tech Team</span>
-              </div>
-            </div>
-          </section>
-
-          <section id="admin" class="grid gap-6 lg:grid-cols-2">
-            <div class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Admin Panel</h2>
-              <p class="text-sm text-slate-600 mt-3">
-                Manage user roles, access policies, and priority escalations for
-                TechNest service teams.
-              </p>
-              <div class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
-                <button class="px-4 py-3 rounded-xl border border-slate-200">
-                  Access Control
-                </button>
-                <button class="px-4 py-3 rounded-xl border border-slate-200">
-                  Technician Roster
-                </button>
-                <button class="px-4 py-3 rounded-xl border border-slate-200">
-                  Alerts & Escalations
-                </button>
-                <button class="px-4 py-3 rounded-xl border border-slate-200">
-                  Compliance Logs
-                </button>
-              </div>
-            </div>
-            <div id="analytics" class="bg-white rounded-2xl p-6 soft-shadow">
-              <h2 class="text-lg font-semibold">Analytics Snapshot</h2>
-              <p class="text-sm text-slate-600 mt-3">
-                Monitor average resolution times, device uptime, and customer
-                satisfaction across active contracts.
-              </p>
-              <div class="mt-4 space-y-2 text-sm text-slate-600">
-                <div class="flex justify-between">
-                  <span>Avg. Resolution</span>
-                  <span>2h 18m</span>
-                </div>
-                <div class="flex justify-between">
-                  <span>Device Health</span>
-                  <span>98.7%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span>CSAT</span>
-                  <span>4.9/5</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
+          <div
+            class="h-9 w-9 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-sm transition-transform hover:scale-110 cursor-pointer">
+            A
+          </div>
+        </div>
       </div>
     </div>
+    <div id="dashboard-mobile-nav"
+      class="lg:hidden hidden fixed inset-y-0 left-0 w-[82vw] sm:w-80 md:w-96 max-w-[24rem] bg-white shadow-xl border-r border-slate-100 z-50 p-6 overflow-y-auto"
+      data-mobile-nav>
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-lg font-semibold text-blue-600">TechNest</span>
 
-    <script src="assets/main.js"></script>
-  </body>
+        </a>
+        <button type="button"
+          class="rounded-full border border-slate-200 p-2 text-slate-600 hover:border-blue-600 hover:text-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-200"
+          data-nav-toggle aria-label="Close menu" aria-controls="dashboard-mobile-nav" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+      </div>
+      <nav class="mt-8 space-y-2">
+        <a href="dashboard.html#overview"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-50 text-blue-600 font-bold transition-all dark:bg-blue-900/30 dark:text-blue-400">
+          <span class="text-lg">📊</span>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard.html#installations"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+          <span class="text-lg">🛠️</span>
+          <span>Installations</span>
+        </a>
+        <a href="dashboard.html#requests"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+          <span class="text-lg">📨</span>
+          <span>Service Requests</span>
+        </a>
+        <a href="dashboard.html#scenes"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+          <span class="text-lg">🧠</span>
+          <span>Automation Scenes</span>
+        </a>
+        <a href="dashboard.html#team"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+          <span class="text-lg">👷</span>
+          <span>Team Assignments</span>
+        </a>
+        <a href="dashboard.html#analytics"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+          <span class="text-lg">📈</span>
+          <span>Analytics</span>
+        </a>
+        <div class="my-2 border-t border-slate-50 dark:border-slate-800"></div>
+        <a href="dashboard.html#admin"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-red-500 hover:bg-red-50 transition-all dark:text-red-400 dark:hover:bg-red-900/20">
+          <span class="text-lg">⚙️</span>
+          <span>Admin Panel</span>
+        </a>
+        <a href="index.html"
+          class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-400 hover:bg-red-50 hover:text-red-600 transition-all dark:text-slate-400 dark:hover:bg-red-900/20">
+          <span class="text-lg">🚪</span>
+          <span>Logout</span>
+        </a>
+      </nav>
+    </div>
+    <div class="lg:hidden hidden fixed inset-0 bg-slate-900/20 z-40" data-mobile-nav-backdrop></div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+    <div class="grid gap-8 lg:grid-cols-[240px_1fr]">
+      <aside class="hidden lg:flex flex-col gap-6 sticky top-24 h-fit">
+
+
+        <nav
+          class="bg-white rounded-[2rem] p-3 soft-shadow border border-slate-100/50 space-y-1 dark:bg-slate-900 dark:border-slate-800">
+          <a href="dashboard.html#overview"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-blue-50 text-blue-600 font-bold transition-all dark:bg-blue-900/30 dark:text-blue-400">
+            <span class="text-lg">📊</span>
+            <span>Overview</span>
+          </a>
+          <a href="dashboard.html#installations"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+            <span class="text-lg">🛠️</span>
+            <span>Installations</span>
+          </a>
+          <a href="dashboard.html#requests"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+            <span class="text-lg">📨</span>
+            <span>Service Requests</span>
+          </a>
+          <a href="dashboard.html#scenes"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+            <span class="text-lg">🧠</span>
+            <span>Automation Scenes</span>
+          </a>
+          <a href="dashboard.html#team"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+            <span class="text-lg">👷</span>
+            <span>Team Assignments</span>
+          </a>
+          <a href="dashboard.html#analytics"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all dark:text-slate-300 dark:hover:bg-slate-800/50">
+            <span class="text-lg">📈</span>
+            <span>Analytics</span>
+          </a>
+          <div class="my-2 border-t border-slate-50 dark:border-slate-800"></div>
+          <a href="dashboard.html#admin"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-red-500 hover:bg-red-50 transition-all dark:text-red-400 dark:hover:bg-red-900/20">
+            <span class="text-lg">⚙️</span>
+            <span>Admin Panel</span>
+          </a>
+          <a href="index.html"
+            class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-400 hover:bg-red-50 hover:text-red-600 transition-all font-medium dark:text-slate-400 dark:hover:bg-red-900/20">
+            <span class="text-lg">🚪</span>
+            <span>Logout Account</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="space-y-8">
+        <section id="overview" class="bg-white rounded-3xl p-6 soft-shadow">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h1 class="text-3xl font-semibold">Service Overview</h1>
+              <p class="text-slate-600 mt-2">
+                Track installations, service requests, and automation health
+                in one place.
+              </p>
+            </div>
+            <a href="contact.html"
+              class="px-6 py-3 rounded-full bg-blue-600 text-white text-sm font-semibold text-center">New
+              Appointment</a>
+          </div>
+        </section>
+
+        <section id="installations" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <p class="text-xs uppercase text-slate-400">Active installs</p>
+            <p class="text-3xl font-semibold mt-3">18</p>
+            <p class="text-sm text-slate-600 mt-2">
+              6 scheduled for this week
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <p class="text-xs uppercase text-slate-400">Open tickets</p>
+            <p class="text-3xl font-semibold mt-3">7</p>
+            <p class="text-sm text-slate-600 mt-2">
+              Average response time 42 mins
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <p class="text-xs uppercase text-slate-400">Automation uptime</p>
+            <p class="text-3xl font-semibold mt-3">99.4%</p>
+            <p class="text-sm text-slate-600 mt-2">
+              Across 150+ connected homes
+            </p>
+          </div>
+        </section>
+
+        <section id="scenes" class="grid gap-6 lg:grid-cols-2">
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Automation Scenes</h2>
+            <p class="text-sm text-slate-600 mt-3">
+              Review active scenes, trigger health checks, and deploy updated
+              routines for lighting and climate control.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <span class="tag">Morning Routine</span>
+              <span class="tag">Security Away</span>
+              <span class="tag">Cinema Mode</span>
+            </div>
+          </div>
+          <div id="team" class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Team Assignments</h2>
+            <p class="text-sm text-slate-600 mt-3">
+              Track technician schedules, certifications, and deployment
+              zones across India.
+            </p>
+            <div class="mt-4 text-sm text-slate-600 space-y-2">
+              <div class="flex justify-between">
+                <span>Arjun Verma</span>
+                <span>North Zone</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Meera Nair</span>
+                <span>West Zone</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="requests" class="grid gap-6 lg:grid-cols-2">
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Upcoming Installations</h2>
+            <div class="mt-4 space-y-3 text-sm text-slate-600">
+              <div class="flex justify-between">
+                <span>Rao Residence • Bengaluru</span>
+                <span>Tomorrow, 10:00 AM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Mehta Residence • Mumbai</span>
+                <span>Fri, 2:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Kapoor Residence • Delhi</span>
+                <span>Sat, 11:00 AM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Admin Notes</h2>
+            <p class="text-sm text-slate-600 mt-4">
+              Ensure all technicians are updated on the latest SmartThings
+              firmware rollouts and security compliance checklists.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <span class="tag">Compliance</span>
+              <span class="tag">Firmware</span>
+              <span class="tag">Tech Team</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="admin" class="grid gap-6 lg:grid-cols-2">
+          <div class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Admin Panel</h2>
+            <p class="text-sm text-slate-600 mt-3">
+              Manage user roles, access policies, and priority escalations for
+              TechNest service teams.
+            </p>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+              <button class="px-4 py-3 rounded-xl border border-slate-200">
+                Access Control
+              </button>
+              <button class="px-4 py-3 rounded-xl border border-slate-200">
+                Technician Roster
+              </button>
+              <button class="px-4 py-3 rounded-xl border border-slate-200">
+                Alerts & Escalations
+              </button>
+              <button class="px-4 py-3 rounded-xl border border-slate-200">
+                Compliance Logs
+              </button>
+            </div>
+          </div>
+          <div id="analytics" class="bg-white rounded-2xl p-6 soft-shadow">
+            <h2 class="text-lg font-semibold">Analytics Snapshot</h2>
+            <p class="text-sm text-slate-600 mt-3">
+              Monitor average resolution times, device uptime, and customer
+              satisfaction across active contracts.
+            </p>
+            <div class="mt-4 space-y-2 text-sm text-slate-600">
+              <div class="flex justify-between">
+                <span>Avg. Resolution</span>
+                <span>2h 18m</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Device Health</span>
+                <span>98.7%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>CSAT</span>
+                <span>4.9/5</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/main.js"></script>
+</body>
+
 </html>

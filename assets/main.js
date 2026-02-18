@@ -30,12 +30,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     syncThemeButtons();
   }
-  const navToggle = document.querySelector("[data-nav-toggle]");
+  const navToggles = document.querySelectorAll("[data-nav-toggle]");
   const mobileNav = document.querySelector("[data-mobile-nav]");
+  const mobileNavBackdrop = document.querySelector(
+    "[data-mobile-nav-backdrop]"
+  );
 
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener("click", () => {
-      mobileNav.classList.toggle("hidden");
+  if (navToggles.length && mobileNav) {
+    const setMobileNavState = (isOpen) => {
+      mobileNav.classList.toggle("hidden", !isOpen);
+      if (mobileNavBackdrop) {
+        mobileNavBackdrop.classList.toggle("hidden", !isOpen);
+      }
+      navToggles.forEach((button) => {
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    };
+
+    navToggles.forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextOpen = mobileNav.classList.contains("hidden");
+        setMobileNavState(nextOpen);
+      });
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileNavState(false);
+      });
+    });
+
+    if (mobileNavBackdrop) {
+      mobileNavBackdrop.addEventListener("click", () => {
+        setMobileNavState(false);
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMobileNavState(false);
+      }
     });
   }
 
@@ -192,6 +226,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.location.hash === "#register") {
       setAuthView("register");
     }
+  }
+
+  const blogFilterButtons = document.querySelectorAll("[data-blog-filter]");
+  if (blogFilterButtons.length) {
+    const setActiveBlogFilter = (activeButton) => {
+      blogFilterButtons.forEach((button) => {
+        const isActive = button === activeButton;
+        button.classList.toggle("border-slate-900", isActive);
+        button.classList.toggle("text-slate-900", isActive);
+        button.classList.toggle("shadow-sm", isActive);
+        button.classList.toggle("border-slate-200", !isActive);
+        button.classList.toggle("text-slate-600", !isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+    };
+
+    blogFilterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setActiveBlogFilter(button);
+      });
+    });
   }
 
   const animatedItems = document.querySelectorAll("[data-animate]");

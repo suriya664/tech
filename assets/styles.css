@@ -84,6 +84,10 @@ body {
   font-size: 0.85rem;
 }
 
+[data-diagram-zone] {
+  color: #0f172a;
+}
+
 .group:hover .tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(-6px);
@@ -251,16 +255,9 @@ body {
   border-color: rgba(148, 163, 184, 0.2);
 }
 
-.dark header,
-.dark header a,
-.dark header button,
-.dark header span,
-.dark header svg {
-  color: #000000 !important;
-}
-
 .dark header {
   background-color: #0f172a !important;
+  color: #e2e8f0;
 }
 
 .dark header .bg-white {
